@@ -1,4 +1,4 @@
-# PostNL REST API PHP Bindings
+# Unofficial PostNL REST API PHP Bindings
 
 [![Latest Stable Version](https://poser.pugx.org/firstred/postnl-api-php/v)](https://packagist.org/packages/firstred/postnl-api-php)
 [![Total Downloads](https://poser.pugx.org/firstred/postnl-api-php/downloads)](https://packagist.org/packages/firstred/postnl-api-php)
@@ -10,7 +10,7 @@
 
 ## About
 
-This PHP library for both PostNL's REST API aims to provide a simple way to connect your 
+This unofficial PHP library for the PostNL REST API aims to provide a simple way to connect your 
 application with PostNL. By abstracting away needless complexity when processing shipment 
 information and increased fault-tolerance, you can get up and running with PostNL in minutes.  
 At the lower level this library uses asynchronous communication and payload splitting for 
