@@ -245,6 +245,14 @@ class ResponseShipment extends AbstractEntity
     }
 
     /**
+     * @return string|null
+     */
+    public function getCodingText(): ?string
+    {
+        return $this->CodingText;
+    }
+
+    /**
      * @param string|null $CodingText
      *
      * @return static
