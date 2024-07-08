@@ -31,6 +31,7 @@ namespace Firstred\PostNL;
 
 use DateTimeInterface;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Log\NullLogger;
 use Throwable;
 use Firstred\PostNL\Entity\Barcode;
 use Firstred\PostNL\Entity\Customer;
@@ -109,7 +110,6 @@ use Firstred\PostNL\Service\ShippingStatusService;
 use Firstred\PostNL\Service\ShippingStatusServiceInterface;
 use Firstred\PostNL\Service\TimeframeService;
 use Firstred\PostNL\Service\TimeframeServiceInterface;
-use Firstred\PostNL\Util\DummyLogger;
 use Firstred\PostNL\Util\RFPdi;
 use Firstred\PostNL\Util\Util;
 use GuzzleHttp\ClientInterface as GuzzleClientInterface;
@@ -538,7 +538,7 @@ class PostNL implements LoggerAwareInterface
      */
     public function resetLogger(): static
     {
-        $this->logger = new DummyLogger();
+        $this->logger = new NullLogger();
 
         return $this;
     }

@@ -37,6 +37,7 @@ use Stringable;
  * Class DummyLogger.
  *
  * @internal
+ * @deprecated since 2.0.9. Use the NullLogger from psr/log instead.
  */
 class DummyLogger implements LoggerInterface
 {

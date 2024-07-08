@@ -43,13 +43,13 @@ use Firstred\PostNL\Entity\Timeframe;
 use Firstred\PostNL\Exception\InvalidArgumentException;
 use Firstred\PostNL\HttpClient\MockHttpClient;
 use Firstred\PostNL\PostNL;
-use Firstred\PostNL\Util\DummyLogger;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\Error;
 use PHPUnit\Framework\TestCase;
+use Psr\Log\NullLogger;
 
 #[TestDox(text: 'The PostNL object')]
 class PostNLRestTest extends TestCase
@@ -106,7 +106,7 @@ class PostNLRestTest extends TestCase
     {
         $this->postnl->resetLogger();
 
-        $this->assertInstanceOf(expected: DummyLogger::class, actual: $this->postnl->getLogger());
+        $this->assertInstanceOf(expected: NullLogger::class, actual: $this->postnl->getLogger());
     }
 
     /** @throws */
