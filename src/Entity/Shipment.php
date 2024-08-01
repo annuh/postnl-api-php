@@ -193,6 +193,11 @@ class Shipment extends AbstractEntity
     #[SerializableProperty(type: 'string')]
     protected ?string $ReturnReference = null;
 
+    /** @var string|null $ReturnReference */
+    #[SerializableProperty(type: 'CodingText')]
+    protected ?string $CodingText = null;
+
+
     /**
      * @throws InvalidArgumentException
      */
@@ -236,6 +241,7 @@ class Shipment extends AbstractEntity
         ?string $Remark = null,
         ?string $ReturnBarcode = null,
         ?string $ReturnReference = null,
+        ?string $CodingText = null,
         ?string $StatusCode = null,
         ?int $PhaseCode = null,
         ?string $DateFrom = null,
@@ -277,6 +283,7 @@ class Shipment extends AbstractEntity
         $this->setRemark(Remark: $Remark);
         $this->setReturnBarcode(ReturnBarcode: $ReturnBarcode);
         $this->setReturnReference(ReturnReference: $ReturnReference);
+        $this->setCodingText(CodingText: $CodingText);
         $this->setStatusCode(StatusCode: $StatusCode);
         $this->setPhaseCode(PhaseCode: $PhaseCode);
         $this->setDateFrom(DateFrom: $DateFrom);
@@ -941,6 +948,25 @@ class Shipment extends AbstractEntity
     public function setReturnReference(?string $ReturnReference): static
     {
         $this->ReturnReference = $ReturnReference;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getCodingText(): ?string
+    {
+        return $this->CodingText;
+    }
+    /**
+     * @param string|null $CodingText
+     *
+     * @return static
+     */
+    public function setCodingText(?string $CodingText): static
+    {
+        $this->CodingText = $CodingText;
 
         return $this;
     }
