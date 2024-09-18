@@ -165,7 +165,7 @@ class DeliveryDateServiceRestRequestBuilder extends AbstractRestRequestBuilder i
 
         $sentDate = $getSentDate->getGetSentDate();
         $query = [
-            'DeliveryDate' => $sentDate->getDeliveryDate()->format('d-m-Y'),
+            'DeliveryDate' => $sentDate->getDeliveryDate()->format(format: 'd-m-Y'),
         ];
         $query['CountryCode'] = $sentDate->getCountryCode();
         if ($duration = $sentDate->getShippingDuration()) {
