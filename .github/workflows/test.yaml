@@ -6,7 +6,7 @@ jobs:
         strategy:
             matrix:
                 operating-system: [ 'ubuntu-latest', 'windows-latest', 'macos-latest' ]
-                php-versions: [ '8.1', '8.2', '8.3', '8.4' ]
+                php-versions: [ '5.6', '7.0', '7.1', '7.2', '7.3', '7.4', '8.0', '8.1', '8.2', '8.3', '8.4' ]
         steps:
             -   name: Checkout repo
                 uses: actions/checkout@v4
@@ -21,34 +21,37 @@ jobs:
                     tools: php-cs-fixer
 
             -   name: Setup problem matchers for PHPUnit
+                shell: bash
                 run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
             -   name: Get composer cache directory
-                uses: mathiasvr/command-output@v2.0.0
                 id: composer-cache
-                with:
-                    run: composer config cache-files-dir
+                shell: bash
+                run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
             -   name: Cache composer dependencies
                 uses: actions/cache@v4
                 with:
-                    path: ${{ steps.composer-cache.outputs.stdout }}
+                    path: ${{ steps.composer-cache.outputs.dir }}
                     key: ${{ runner.os }}-${{ matrix.php-versions }}-composer-${{ hashFiles('**/composer.json') }}
                     restore-keys: ${{ runner.os }}-${{ matrix.php-versions }}-composer-
 
             -   name: Install Composer dependencies
+                shell: bash
                 run: composer install --no-progress --prefer-dist --optimize-autoloader
 
             -   name: Test with PHPUnit
                 if: matrix.php-versions != '8.3' || matrix.operating-system != 'ubuntu-latest'
                 env:
                     XDEBUG_MODE: coverage
+                shell: bash
                 run: vendor/bin/phpunit --testdox -- tests
 
             -   name: Test with PHPUnit (coverage)
                 if: matrix.php-versions == '8.3' && matrix.operating-system == 'ubuntu-latest'
                 env:
                     XDEBUG_MODE: coverage
+                shell: bash
                 run: vendor/bin/phpunit --testdox --coverage-clover coverage.xml -- tests
 
             -   name: Codecov
