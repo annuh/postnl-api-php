@@ -27,7 +27,7 @@ The following definitions and formats are used:
 
 .. confval:: DateTimes
 
-    DateTimes are referring to a specific date and time. They can be formatted for example as ``2021-02-03 12:12:12``.
+    DateTimes are referring to a specific date and time. They can be formatted for example as ``2024-02-03 12:12:12``.
     Is always a :php:class:`DateTimeImmutable` object.
 
 .. note::
