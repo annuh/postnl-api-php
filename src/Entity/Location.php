@@ -127,13 +127,13 @@ class Location extends AbstractEntity
         /* @param string|DateTimeInterface|null $DeliveryDate */
         string|DateTimeInterface|null $DeliveryDate = null,
         /* @param string[]|null $DeliveryOptions */
-        array $DeliveryOptions = null,
+        ?array $DeliveryOptions = null,
         ?string $OpeningTime = null,
         /* @param string[]|null $Options */
-        array $Options = null,
-        Coordinates $Coordinates = null,
-        CoordinatesNorthWest $CoordinatesNorthWest = null,
-        CoordinatesSouthEast $CoordinatesSouthEast = null,
+        ?array $Options = null,
+        ?Coordinates $Coordinates = null,
+        ?CoordinatesNorthWest $CoordinatesNorthWest = null,
+        ?CoordinatesSouthEast $CoordinatesSouthEast = null,
         ?string $City = null,
         ?string $Street = null,
         ?string $HouseNr = null,

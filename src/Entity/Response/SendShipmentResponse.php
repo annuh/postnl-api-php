@@ -51,9 +51,9 @@ class SendShipmentResponse extends AbstractEntity
      */
     public function __construct(
         /* @param MergedLabel[]|null $MergedLabels */
-        array $MergedLabels = null,
+        ?array $MergedLabels = null,
         /* @param ResponseShipment[]|null $ResponseShipments */
-        array $ResponseShipments = null,
+        ?array $ResponseShipments = null,
     ) {
         parent::__construct();
 

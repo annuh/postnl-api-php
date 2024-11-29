@@ -50,7 +50,7 @@ class GetNearestLocationsResponse extends AbstractEntity
     /**
      * @param GetLocationsResult|null $GetLocationsResult
      */
-    public function __construct(GetLocationsResult $GetLocationsResult = null)
+    public function __construct(?GetLocationsResult $GetLocationsResult = null)
     {
         parent::__construct();
 

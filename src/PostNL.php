@@ -1050,7 +1050,7 @@ class PostNL implements LoggerAwareInterface
      *
      * @since 1.0.0
      */
-    public function generateBarcode(string $type = '3S', string $range = null, string $serie = null, bool $eps = false): string
+    public function generateBarcode(string $type = '3S', ?string $range = null, ?string $serie = null, bool $eps = false): string
     {
         if (2 !== strlen(string: $type)) {
             throw new InvalidBarcodeException(message: "Barcode type `$type` is invalid");
@@ -1925,7 +1925,7 @@ class PostNL implements LoggerAwareInterface
      *
      * @since 1.2.0
      */
-    public function getUpdatedShipments(DateTimeInterface $dateTimeFrom = null, DateTimeInterface $dateTimeTo = null): array
+    public function getUpdatedShipments(?DateTimeInterface $dateTimeFrom = null, ?DateTimeInterface $dateTimeTo = null): array
     {
         return $this->getShippingStatusService()->getUpdatedShipments(
             customer: $this->getCustomer(),

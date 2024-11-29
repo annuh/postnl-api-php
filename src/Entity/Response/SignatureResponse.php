@@ -45,7 +45,7 @@ class SignatureResponse extends AbstractEntity
     /**
      * @param Signature|null $Signature
      */
-    public function __construct(Signature $Signature = null)
+    public function __construct(?Signature $Signature = null)
     {
         parent::__construct();
 

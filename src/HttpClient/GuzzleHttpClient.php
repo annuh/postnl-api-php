@@ -76,8 +76,8 @@ class GuzzleHttpClient extends BaseHttpClient implements HttpClientInterface
      * @since 1.3.0 Custom constructor
      */
     public function __construct(
-        Client $client = null,
-        LoggerInterface $logger = null,
+        ?Client $client = null,
+        ?LoggerInterface $logger = null,
         int $concurrency = 5,
         int $maxRetries = 5
     ) {
@@ -106,8 +106,8 @@ class GuzzleHttpClient extends BaseHttpClient implements HttpClientInterface
             $stack->push(middleware: Middleware::retry(decider: function (
                 $retries,
                 RequestInterface $request,
-                ResponseInterface $response = null,
-                GuzzleException $exception = null
+                ?ResponseInterface $response = null,
+                ?GuzzleException $exception = null
             ) {
                 // Limit the number of retries to 5
                 if ($retries >= $this->getMaxRetries()) {

@@ -133,9 +133,9 @@ class ResponseLocation extends AbstractEntity
      * @param Sustainability|null $Sustainability
      */
     public function __construct(
-        Address $Address = null,
+        ?Address $Address = null,
         /* @param string[]|null $DeliveryOptions */
-        array $DeliveryOptions = null,
+        ?array $DeliveryOptions = null,
         ?string $Distance = null,
         ?string $Latitude = null,
         ?string $Longitude = null,

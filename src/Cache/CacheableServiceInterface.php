@@ -87,7 +87,7 @@ interface CacheableServiceInterface extends ServiceInterface, ClockAwareInterfac
      *
      * @since 1.2.0
      */
-    public function setTtl(DateInterval|DateTimeInterface|int $ttl = null): static;
+    public function setTtl(DateInterval|DateTimeInterface|int|null $ttl = null): static;
 
     /**
      * @return CacheItemPoolInterface|null
@@ -103,5 +103,5 @@ interface CacheableServiceInterface extends ServiceInterface, ClockAwareInterfac
      *
      * @since 1.2.0
      */
-    public function setCache(CacheItemPoolInterface $cache = null): static;
+    public function setCache(?CacheItemPoolInterface $cache = null): static;
 }

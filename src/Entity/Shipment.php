@@ -203,12 +203,12 @@ class Shipment extends AbstractEntity
      */
     public function __construct(
         /* @param Address[]|null $Addresses */
-        array $Addresses = null,
+        ?array $Addresses = null,
         /* @param Amount[]|null $Amounts */
-        array $Amounts = null,
+        ?array $Amounts = null,
         ?string $Barcode = null,
         /* @param Contact[]|null $Contacts */
-        array $Contacts = null,
+        ?array $Contacts = null,
         ?string $Content = null,
         string|DateTimeInterface|null $CollectionTimeStampEnd = null,
         string|DateTimeInterface|null $CollectionTimeStampStart = null,
@@ -223,18 +223,18 @@ class Shipment extends AbstractEntity
         ?string $DownPartnerID = null,
         ?string $DownPartnerLocation = null,
         /* @param Event[]|null $Events */
-        array $Events = null,
+        ?array $Events = null,
         /* @param Group[]|null $Groups */
-        array $Groups = null,
+        ?array $Groups = null,
         ?string $IDExpiration = null,
         ?string $IDNumber = null,
         ?string $IDType = null,
         /* @param OldStatus[]|null $OldStatuses */
-        array $OldStatuses = null,
+        ?array $OldStatuses = null,
         ?string $ProductCodeCollect = null,
         ?string $ProductCodeDelivery = null,
         /* @param ProductOption[]|null $ProductOptions */
-        array $ProductOptions = null,
+        ?array $ProductOptions = null,
         ?string $ReceiverDateOfBirth = null,
         ?string $Reference = null,
         ?string $ReferenceCollect = null,

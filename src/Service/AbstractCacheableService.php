@@ -90,8 +90,8 @@ abstract class AbstractCacheableService extends AbstractService implements Cache
         HttpClientInterface $httpClient,
         RequestFactoryInterface $requestFactory,
         StreamFactoryInterface $streamFactory,
-        CacheItemPoolInterface $cache = null,
-        DateInterval|DateTimeInterface|int $ttl = null
+        ?CacheItemPoolInterface $cache = null,
+        DateInterval|DateTimeInterface|int|null $ttl = null
     ) {
         $this->cache = $cache;
         $this->ttl = $ttl;

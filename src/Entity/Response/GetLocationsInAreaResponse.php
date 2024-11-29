@@ -47,7 +47,7 @@ class GetLocationsInAreaResponse extends AbstractEntity
      */
     public function __construct(
         /* @param GetLocationsResult|null $GetLocationsResult */
-        GetLocationsResult $GetLocationsResult = null,
+        ?GetLocationsResult $GetLocationsResult = null,
     ) {
         parent::__construct();
 

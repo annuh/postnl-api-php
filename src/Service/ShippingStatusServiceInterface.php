@@ -205,7 +205,7 @@ interface ShippingStatusServiceInterface extends ServiceInterface, CacheableServ
      */
     public function getUpdatedShipments(
         Customer $customer,
-        DateTimeInterface $dateTimeFrom = null,
-        DateTimeInterface $dateTimeTo = null,
+        ?DateTimeInterface $dateTimeFrom = null,
+        ?DateTimeInterface $dateTimeTo = null,
     ): array;
 }

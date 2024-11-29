@@ -54,9 +54,9 @@ class ResponseTimeframes extends AbstractEntity
      */
     public function __construct(
         /* @param ReasonNoTimeframe[]|null $ReasonNoTimeframes */
-        array $ReasonNoTimeframes = null,
+        ?array $ReasonNoTimeframes = null,
         /* @param Timeframe[]|null $Timeframes */
-        array $Timeframes = null,
+        ?array $Timeframes = null,
     ) {
         parent::__construct();
 

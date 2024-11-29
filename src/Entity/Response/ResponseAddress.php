@@ -552,7 +552,7 @@ class ResponseAddress extends AbstractEntity
      *
      * @return static
      */
-    public function setZipcode(string $Zipcode = null): static
+    public function setZipcode(?string $Zipcode = null): static
     {
         if (is_null(value: $Zipcode)) {
             $this->Zipcode = null;

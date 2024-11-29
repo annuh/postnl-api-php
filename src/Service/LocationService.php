@@ -87,8 +87,8 @@ class LocationService extends AbstractCacheableService implements LocationServic
         HttpClientInterface $httpClient,
         RequestFactoryInterface $requestFactory,
         StreamFactoryInterface $streamFactory,
-        CacheItemPoolInterface $cache = null,
-        DateInterval|DateTimeInterface|int $ttl = null,
+        ?CacheItemPoolInterface $cache = null,
+        DateInterval|DateTimeInterface|int|null $ttl = null,
     ) {
         parent::__construct(
             apiKey: $apiKey,

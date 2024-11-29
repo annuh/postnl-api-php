@@ -52,7 +52,7 @@ class ResponseException extends ApiException
      * @param Exception|null         $previous
      * @param ResponseInterface|null $response
      */
-    public function __construct(string $message = '', int $code = 0, $previous = null, ResponseInterface $response = null)
+    public function __construct(string $message = '', int $code = 0, $previous = null, ?ResponseInterface $response = null)
     {
         parent::__construct(message: $message, code: $code, previous: $previous);
 

@@ -137,9 +137,9 @@ class CompleteStatusResponseShipment extends AbstractEntity
      */
     public function __construct(
         /* @param StatusAddress[]|null $Addresses */
-        array $Addresses = null,
+        ?array $Addresses = null,
         /* @param Amount[]|null $Amounts */
-        array $Amounts = null,
+        ?array $Amounts = null,
         ?string $Barcode = null,
         ?Customer $Customer = null,
         DateTimeInterface|string|null $DeliveryDate = null,

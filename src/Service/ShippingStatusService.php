@@ -93,8 +93,8 @@ class ShippingStatusService extends AbstractCacheableService implements Shipping
         HttpClientInterface $httpClient,
         RequestFactoryInterface $requestFactory,
         StreamFactoryInterface $streamFactory,
-        CacheItemPoolInterface $cache = null,
-        DateInterval|DateTimeInterface|int $ttl = null,
+        ?CacheItemPoolInterface $cache = null,
+        DateInterval|DateTimeInterface|int|null $ttl = null,
     ) {
         parent::__construct(
             apiKey: $apiKey,
@@ -473,8 +473,8 @@ class ShippingStatusService extends AbstractCacheableService implements Shipping
      */
     public function getUpdatedShipments(
         Customer $customer,
-        DateTimeInterface $dateTimeFrom = null,
-        DateTimeInterface $dateTimeTo = null,
+        ?DateTimeInterface $dateTimeFrom = null,
+        ?DateTimeInterface $dateTimeTo = null,
     ): array {
         if ((!$dateTimeFrom && $dateTimeTo) || ($dateTimeFrom && !$dateTimeTo)) {
             throw new NotSupportedException(message: 'Either pass both dates or none. A single date is not supported.');

@@ -60,7 +60,7 @@ class GetDeliveryDateResponse extends AbstractEntity
     public function __construct(
         string|DateTimeInterface|null $DeliveryDate = null,
         /* @param string[]|null $Options */
-        array $Options = null,
+        ?array $Options = null,
     ) {
         parent::__construct();
 

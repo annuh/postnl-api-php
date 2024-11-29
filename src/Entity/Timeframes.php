@@ -51,9 +51,9 @@ class Timeframes extends AbstractEntity
      */
     public function __construct(
         /* @param Timeframe[]|null $timeframes */
-        array $timeframes = null,
+        ?array $timeframes = null,
         /* @param TimeframeTimeFrame[]|null $timeframetimeframes */
-        array $timeframetimeframes = null
+        ?array $timeframetimeframes = null
     ) {
         parent::__construct();
 

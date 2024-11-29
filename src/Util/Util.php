@@ -57,7 +57,7 @@ class Util
      *
      * @codeCoverageIgnore
      */
-    public static function urlEncode(array $arr, string $prefix = null): string
+    public static function urlEncode(array $arr, ?string $prefix = null): string
     {
         $r = [];
         foreach ($arr as $k => $v) {

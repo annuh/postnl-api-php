@@ -54,7 +54,7 @@ class CifException extends ApiException
      * @param int             $code
      * @param \Throwable|null $previous
      */
-    public function __construct($message = '', int $code = 0, \Throwable $previous = null)
+    public function __construct($message = '', int $code = 0, ?\Throwable $previous = null)
     {
         if (is_array(value: $message)) {
             $this->messages = $message;
