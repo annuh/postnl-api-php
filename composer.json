@@ -42,7 +42,7 @@
         "guzzlehttp/guzzle": "^7.2",
         "monolog/monolog": "^3.0",
         "php-http/mock-client": "^1.3",
-        "phpunit/phpunit": "^10.0",
+        "phpunit/phpunit": "^10.5",
         "symfony/clock": "^6.0",
         "symfony/dotenv": "^6.0"
     },

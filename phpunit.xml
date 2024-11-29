@@ -25,7 +25,7 @@
   -->
 <phpunit
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
         colors="true"
         testdox="true"
         bootstrap="tests/bootstrap.php"
@@ -36,14 +36,14 @@
         displayDetailsOnTestsThatTriggerWarnings="true"
         displayDetailsOnTestsThatTriggerErrors="true"
 >
-  <testsuites>
-    <testsuite name="default">
-      <directory>./tests</directory>
-    </testsuite>
-  </testsuites>
-  <coverage>
-    <include>
-      <directory suffix=".php">src</directory>
-    </include>
-  </coverage>
+    <source>
+        <include>
+            <directory>./src</directory>
+        </include>
+    </source>
+    <testsuites>
+        <testsuite name="default">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
 </phpunit>
