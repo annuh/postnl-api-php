@@ -45,7 +45,7 @@ class UtilTest extends TestCase
     }
 
     /** @return array */
-    public function guzzleVersionProvider(): array
+    public static function guzzleVersionProvider(): array
     {
         return [
             [6, '6.0.0'],

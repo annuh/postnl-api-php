@@ -667,7 +667,7 @@ class LabellingServiceTest extends ServiceTestCase
     /**
      * @return array[]
      */
-    public function singleLabelsProvider(): array
+    public static function singleLabelsProvider(): array
     {
         return [
             [PsrMessage::parseResponse(message: file_get_contents(filename: _RESPONSES_DIR_.'/rest/labelling/singlelabel.http'))],
@@ -679,7 +679,7 @@ class LabellingServiceTest extends ServiceTestCase
     /**
      * @return array[]
      */
-    public function multipleLabelsProvider(): array
+    public static function multipleLabelsProvider(): array
     {
         return [
             [
