@@ -30,6 +30,8 @@
         testdox="true"
         bootstrap="tests/bootstrap.php"
         cacheDirectory=".phpunit.cache"
+        displayDetailsOnPhpunitDeprecations="true"
+        displayDetailsOnTestsThatTriggerNotices="true"
         displayDetailsOnTestsThatTriggerDeprecations="true"
         displayDetailsOnTestsThatTriggerWarnings="true"
         displayDetailsOnTestsThatTriggerErrors="true"
